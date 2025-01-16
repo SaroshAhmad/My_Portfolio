@@ -1,4 +1,4 @@
-import logo from "../assets/raviKumarLogo.webp"
+import logo from "../assets/AhmadSaroshLogo.svg"
 import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6"
 
 const Navbar = () => {
@@ -6,7 +6,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between py-5">
             <div className="flex flex-shrink-0 items-center">
                 <a href="/" aria-label="Home">
-                    <img src={logo} alt="" />
+                    <img src={logo} alt="Logo" className="transition-all duration-300 hover:filter hover:drop-shadow-glow" />
                 </a>
             </div>
             <div className="m-8 flex items-center justify-center gap-4 text-2xl">

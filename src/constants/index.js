@@ -9,32 +9,32 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    year: "2024 - Present",
+    role: "Graduate Software Developer",
+    company: "Reality AI Lab",
+    description: `Developing innovative AI tools like Marvel AI (Teaching Assistant) and Sky AI (Career Coach) to enhance education and career growth globally. Skilled in building user-friendly interfaces with ReactJS, integrating back-end services with Node.js and Python, and deploying on Google Cloud Run for seamless user experiences. Proficient in managing databases like Firestore, Firebase, and Redis, optimising workflows, and ensuring system reliability with testing tools like LogRocket. Experienced in CI/CD automation with GitHub Actions and collaborative development using GitHub.`,
+    technologies: ["React.js", "Next.js", "Node.js", "Python", "Firebase", "Google Cloud"],
   },
   {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
+    year: "2022 - 2024",
+    role: "Front-End Developer & Founder",
+    company: "Magle Digital",
+    description: `At Magle, we helped brands connect with their customers through personalised digital experiences. Our services included web development and 360-degree marketing campaigns, leveraging top advertising and social media platforms to engage and influence consumers. Many of our clients stayed loyal partners throughout.`,
+    technologies: ["HTML", "CSS", "JavaScript", "React", "WordPress"],
   },
   {
     year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
+    role: "Front-End Developer",
+    company: "Techsbeyond Tech. Sol.",
+    description: `Designed and established user-friendly websites, including optimized check-out page, resulting in a 25% increase in user clicks and subsequently 33% in customer purchases.`,
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "SaSS"],
   },
   {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    year: "2021",
+    role: "Business Development Executive",
+    company: "Zixdo",
+    description: `At Zixdo Pvt Ltd, a leading car wash company, I successfully opened three franchise outlets in one of India's largest metropolitan cities within a week of joining. My role involved pitching to potential customers, building strong relationships, managing their concerns, and coordinating with the company's leadership to deliver solutions. Additionally, I assisted franchise owners in crafting effective marketing strategies to boost visibility and drive bookings.`,
+    technologies: ["Business Development", "Client Relationship Management", "Strategic Marketing", "Operational Coordination"],
   },
 ];
 
@@ -70,7 +70,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+  address: "Augustus Road, Birmingham, B15 3NB, UK ",
+  phoneNo: "+44 7436659548 ",
+  email: "ahmadsarosh07@gmail.com",
 };

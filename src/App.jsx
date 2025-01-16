@@ -1,5 +1,7 @@
+import Experience from "./components/Experience"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import Projects from "./components/Projects"
 import Technologies from "./components/Technologies"
 
 const App = () => {
@@ -12,6 +14,8 @@ const App = () => {
         <Navbar />
         <Hero />
         <Technologies />
+        <Projects />
+        <Experience />
       </div>
     </div>
   )

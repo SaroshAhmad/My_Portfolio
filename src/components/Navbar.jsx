@@ -6,7 +6,7 @@ const Navbar = () => {
         <nav className="flex items-center justify-between py-5">
             <div className="flex flex-shrink-0 items-center">
                 <a href="/" aria-label="Home">
-                    <img src={logo} alt="Logo" className="transition-all duration-300 hover:filter hover:drop-shadow-glow" />
+                    <img src={logo} alt="Logo" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 transition-all duration-400 hover:filter hover:drop-shadow-glow" />
                 </a>
             </div>
             <div className="m-8 flex items-center justify-center gap-4 text-2xl">

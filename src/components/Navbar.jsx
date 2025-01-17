@@ -1,18 +1,65 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../assets/AhmadSaroshLogo.svg";
 import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
-import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa6";
+import { db, doc, getDoc, setDoc, increment } from "../firebase"; // Firebase functions
+import confetti from "canvas-confetti"; // Confetti animation
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isLiked, setIsLiked] = useState(false);
+    const [likeCount, setLikeCount] = useState(0);
 
     // Scroll handler
     const handleScroll = () => {
         setIsScrolled(window.scrollY > 0);
     };
     window.addEventListener("scroll", handleScroll);
+
+    // Fetch like count from Firestore
+    useEffect(() => {
+        const fetchLikeCount = async () => {
+            const docRef = doc(db, "likes", "totalLikes");
+            const docSnap = await getDoc(docRef);
+
+            if (docSnap.exists()) {
+                setLikeCount(docSnap.data().count);
+            } else {
+                // Create the document if it doesn't exist
+                await setDoc(docRef, { count: 0 });
+            }
+        };
+        fetchLikeCount();
+    }, []);
+
+    // Handle heart click
+    const handleLike = async () => {
+        setIsLiked(true);
+
+        // Increment like count in Firestore
+        const docRef = doc(db, "likes", "totalLikes");
+        await setDoc(docRef, { count: increment(1) }, { merge: true });
+
+        // Update local state for like count
+        setLikeCount((prevCount) => prevCount + 1);
+
+        // Trigger confetti animation
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 },
+        });
+
+        // Show the thank you message
+        showThankYouMessage();
+    };
+
+    // Display thank you message
+    const showThankYouMessage = () => {
+        alert(`Thank you for your love! The website has ${likeCount + 1} likes!`);
+    };
 
     return (
         <nav
@@ -72,7 +119,10 @@ const Navbar = () => {
 
             {/* Social Icons for Large Screens */}
             <div className="hidden lg:flex items-center gap-4 text-2xl text-stone-300">
-                <CiHeart className="text-3xl" />
+                <FaHeart
+                    onClick={handleLike}
+                    className={`text-3xl cursor-pointer ${isLiked ? "text-red-500 delay-300" : "text-stone-300"}`}
+                />
                 <a
                     href="https://www.linkedin.com/in/ahmadsarosh/"
                     target="_blank"
@@ -124,7 +174,8 @@ const Navbar = () => {
 
             {/* Hamburger Menu Dropdown for Small Screens */}
             <div
-                className={`fixed top-32 right-4 w-60 h-auto pb-4 bg-stone-900/60 backdrop-blur-sm rounded-lg z-40 transition-all duration-300 transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+                className={`fixed top-32 right-4 w-60 h-auto pb-4 bg-stone-900/60 backdrop-blur-sm rounded-lg z-40 transition-all duration-300 transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+                    }`}
             >
                 <div className="flex flex-col items-start justify-start mt-12 ml-4 gap-8 text-stone-300 text-lg font-semibold">
                     {/* Navbar Links */}

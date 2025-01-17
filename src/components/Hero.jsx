@@ -19,7 +19,7 @@ const Hero = () => {
                         <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter">
                             {HERO_CONTENT}
                         </p>
-                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download className="rounded-full bg-white p-4 text-sm text-stone-900 hover:bg-cyan-400 transition">Download Resume</a>
+                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download className="rounded-full bg-white p-4 text-sm text-stone-900 hover:bg-cyan-400 transition mb-4">Download Resume</a>
                     </div>
                 </div>
             </div>

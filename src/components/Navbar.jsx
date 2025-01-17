@@ -2,6 +2,7 @@ import { useState } from "react";
 import logo from "../assets/AhmadSaroshLogo.svg";
 import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
+import { CiHeart } from "react-icons/ci";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,6 +72,7 @@ const Navbar = () => {
 
             {/* Social Icons for Large Screens */}
             <div className="hidden lg:flex items-center gap-4 text-2xl text-stone-300">
+                <CiHeart className="text-3xl" />
                 <a
                     href="https://www.linkedin.com/in/ahmadsarosh/"
                     target="_blank"

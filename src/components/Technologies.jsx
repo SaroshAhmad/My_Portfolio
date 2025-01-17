@@ -17,7 +17,7 @@ import { FaJava } from "react-icons/fa"; // Java icon import
 
 const Technologies = () => {
     return (
-        <div className="pb-24 border-t border-stone-900" id="tech">
+        <div className="pb-24 border-t border-cyan-950" id="tech">
             <h2 className="my-20 text-center text-4xl text-stone-200">Tech Stack</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 px-8">
                 {/* Frontend */}

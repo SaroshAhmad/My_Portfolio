@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -37,7 +38,6 @@ const Technologies = () => {
     const [shuffledTech, setShuffledTech] = useState([]);
 
     useEffect(() => {
-        // Fisher-Yates shuffle algorithm
         const shuffleArray = (array) => {
             const newArray = [...array];
             for (let i = newArray.length - 1; i > 0; i--) {
@@ -50,16 +50,78 @@ const Technologies = () => {
         setShuffledTech(shuffleArray(technologies));
     }, []);
 
+    const containerVariants = {
+        hidden: {},
+        visible: {
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: {
+            opacity: 0,
+            scale: 0.3,
+            rotate: -20,
+        },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            rotate: 0,
+            transition: {
+                type: "spring",
+                stiffness: 70,
+                damping: 10,
+                mass: 0.5
+            }
+        }
+    };
+
+    const floatingAnimation = {
+        y: [-5, 5],
+        transition: {
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+        }
+    };
+
     return (
         <div className="py-24 px-4 md:px-8 border-t border-cyan-950" id="tech">
-            <h2 className="mb-20 text-center text-4xl text-stone-200">Tech Stack</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            <motion.h2
+                className="mb-20 text-center text-4xl text-stone-200"
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+            >
+                Tech Stack
+            </motion.h2>
+            <motion.div
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+            >
                 {shuffledTech.map((tech, index) => (
-                    <div
+                    <motion.div
                         key={index}
                         className="group relative rounded-xl overflow-hidden"
+                        variants={itemVariants}
+                        whileHover={{ scale: 1.05 }}
+                        animate={floatingAnimation}
+                        custom={index}
                     >
-                        <div className="absolute inset-0 bg-gradient-to-br from-stone-800/50 to-stone-900/50 backdrop-blur-sm border border-stone-300/20 transition-all duration-300 group-hover:backdrop-blur-md" />
+                        <motion.div
+                            className="absolute inset-0 bg-gradient-to-br from-stone-800/50 to-stone-900/50 backdrop-blur-sm border border-stone-300/20 transition-all duration-300 group-hover:backdrop-blur-md"
+                            whileHover={{
+                                backgroundColor: "rgba(0,0,0,0.7)",
+                                transition: { duration: 0.3 }
+                            }}
+                        />
 
                         <a
                             href={tech.link}
@@ -67,21 +129,32 @@ const Technologies = () => {
                             rel="noopener noreferrer"
                             className="block p-8 relative z-10"
                         >
-                            <div className="flex items-center justify-center">
-                                <div className={`text-5xl ${tech.color} transform transition-all duration-300 group-hover:scale-90 group-hover:opacity-50`}>
+                            <motion.div
+                                className="flex items-center justify-center"
+                                whileHover={{ rotate: [0, -10, 10, -5, 5, 0] }}
+                                transition={{ duration: 0.5 }}
+                            >
+                                <motion.div
+                                    className={`text-5xl ${tech.color} transform transition-all duration-300 group-hover:scale-90 group-hover:opacity-50`}
+                                    whileHover={{ scale: 1.1 }}
+                                >
                                     {tech.icon}
-                                </div>
-                            </div>
+                                </motion.div>
+                            </motion.div>
 
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <motion.div
+                                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                initial={{ y: 20 }}
+                                whileHover={{ y: 0 }}
+                            >
                                 <span className="text-white text-lg font-medium bg-black/40 px-3 py-1 rounded-md backdrop-blur-sm">
                                     {tech.name}
                                 </span>
-                            </div>
+                            </motion.div>
                         </a>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
     );
 };

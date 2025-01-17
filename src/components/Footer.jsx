@@ -6,27 +6,27 @@ const Footer = () => {
                 {/* Middle Section: Quick Links */}
                 <div className="flex flex-wrap justify-between gap-8 text-left">
                     <div className="w-1/2 sm:w-1/4">
-                        <h3 className="text-lg font-semibold mb-4">Explore</h3>
+                        <h3 className="text-lg text-white font-semibold mb-4">Explore</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-cyan-400">About Me</a></li>
-                            <li><a href="#projects" className="hover:text-cyan-400">Projects</a></li>
-                            <li><a href="#tech" className="hover:text-cyan-400">Tech Stack</a></li>
-                            <li><a href="#contact" className="hover:text-cyan-400">Contact</a></li>
+                            <li><a href="#" className="text-stone-100 hover:text-cyan-400">About Me</a></li>
+                            <li><a href="#projects" className="text-stone-100 hover:text-cyan-400">Projects</a></li>
+                            <li><a href="#tech" className="text-stone-100 hover:text-cyan-400">Tech Stack</a></li>
+                            <li><a href="#contact" className="text-stone-100 hover:text-cyan-400">Contact</a></li>
                         </ul>
                     </div>
                     <div className="w-1/2 sm:w-1/4">
-                        <h3 className="text-lg font-semibold mb-4">Resources</h3>
+                        <h3 className="text-lg text-white font-semibold mb-4">Resources</h3>
                         <ul className="space-y-2">
-                            <li><a href="/blog" className="hover:text-cyan-400">Blog</a></li>
-                            <li><a href="/resume.pdf" className="hover:text-cyan-400" download>Resume</a></li>
+                            <li><a href="/blog" className="text-stone-100 hover:text-cyan-400">Blog</a></li>
+                            <li><a href="/resume.pdf" className="text-stone-100 hover:text-cyan-400" download>Resume</a></li>
                         </ul>
                     </div>
                     <div className="w-1/2 sm:w-1/4">
-                        <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                        <h3 className="text-lg text-white font-semibold mb-4">Contact</h3>
                         <ul className="space-y-2">
-                            <li><span>📍 Birmingham, UK</span></li>
-                            <li><a href="mailto:ahmadsarosh07@gmail.com" className="hover:text-cyan-400">ahmadsarosh07@gmail.com</a></li>
-                            <li><a href="tel:+447436659548" className="hover:text-cyan-400">+44 7436659548</a></li>
+                            <li><span className="text-stone-100">📍 Birmingham, UK</span></li>
+                            <li><a href="mailto:ahmadsarosh07@gmail.com" className="text-stone-100 hover:text-cyan-400">ahmadsarosh07@gmail.com</a></li>
+                            <li><a href="tel:+447436659548" className="text-stone-100 hover:text-cyan-400">+44 7436659548</a></li>
                         </ul>
                     </div>
                     <div className="w-1/2 sm:w-1/4">

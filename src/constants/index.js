@@ -46,6 +46,7 @@ export const PROJECTS = [
       `Developed a Netflix clone using React and Firebase,
       integrating TMDB API for movie data and implementing secure user authentication.`,
     technologies: ["JavaScript", "React", "Tailwind CSS", "API", "Firebase"],
+    githubLink: "https://github.com/SaroshAhmad/Netflix_Clone",
   },
   {
     title: "Task Management App",
@@ -57,6 +58,7 @@ export const PROJECTS = [
       app supports task assignment, tracking, and completion, providing a streamlined workflow for
       managing daily responsibilities.`,
     technologies: ["React", "JSX", "CSS"],
+    githubLink: "https://github.com/SaroshAhmad/",
   },
   {
     title: "Portfolio Website",
@@ -64,6 +66,7 @@ export const PROJECTS = [
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
+    githubLink: "https://github.com/SaroshAhmad/My_Portfolio",
   },
   {
     title: "Smart Home Automation System ",
@@ -73,6 +76,7 @@ export const PROJECTS = [
       microservice-based smart home system using Spring Boot, Angular, and MySQL, automating
       tasks like lighting and security.`,
     technologies: ["Java", "SpringBoot", "Angular", "MySQL", "Tomcat"],
+    githubLink: "https://github.com/SaroshAhmad/smart-home-automation",
   },
 ];
 

@@ -28,7 +28,7 @@ const Hero = () => {
                 <div className="w-full lg:w-1/2">
                     <div className="flex flex-col items-center lg:items-start mt-10">
                         {/* Name */}
-                        <h2 className="pb-2 text-4xl tracking-tighter lg:text-8xl mt-0 lg:mt-10">
+                        <h2 className="pb-2 text-white text-4xl tracking-tighter lg:text-8xl mt-0 lg:mt-10">
                             <motion.span
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
@@ -37,7 +37,7 @@ const Hero = () => {
                                 Ahmad{" "}
                             </motion.span>
                             <motion.span
-                                className="bg-gradient-to-r from-cyan-200 to-cyan-500 bg-clip-text text-transparent"
+                                className="bg-gradient-to-r from-cyan-200 to-cyan-600 bg-clip-text text-transparent"
                                 initial={{ opacity: 0, filter: "blur(10px)" }}
                                 animate={{ opacity: 1, filter: "blur(0px)" }}
                                 transition={{ duration: 1.2, ease: easing, delay: 0.5 }}
@@ -48,7 +48,7 @@ const Hero = () => {
 
                         {/* Role */}
                         <motion.span
-                            className="bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text text-3xl tracking-tight text-transparent"
+                            className="bg-gradient-to-r from-stone-100 to-stone-400 bg-clip-text text-3xl tracking-tight text-transparent"
                             initial={{ opacity: 0, filter: "blur(10px)" }}
                             animate={{ opacity: 1, filter: "blur(0px)" }}
                             transition={{ duration: 1.2, ease: easing, delay: 1 }}
@@ -58,7 +58,7 @@ const Hero = () => {
 
                         {/* Description */}
                         <motion.p
-                            className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter text-center lg:text-left"
+                            className="my-2 max-w-lg py-6 text-white text-xl leading-relaxed tracking-tighter text-center lg:text-left"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1.2, ease: easing, delay: 1.5 }}

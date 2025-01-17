@@ -3,7 +3,7 @@ import { HERO_CONTENT } from "../constants"
 
 const Hero = () => {
     return (
-        <div className="pb-4 lg:mb-36 mt-10">
+        <div className="pt-20 pb-4 lg:mb-36 mt-10">
             <div className="flex flex-wrap lg:flex-row-reverse">
                 <div className="w-full lg:w-1/2">
                     <div className="flex justify-center lg:p-8">
@@ -19,7 +19,7 @@ const Hero = () => {
                         <p className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter">
                             {HERO_CONTENT}
                         </p>
-                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download className="rounded-full bg-white p-4 text-sm text-stone-900 hover:bg-cyan-500 transition">Download Resume</a>
+                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" download className="rounded-full bg-white p-4 text-sm text-stone-900 hover:bg-cyan-400 transition">Download Resume</a>
                     </div>
                 </div>
             </div>

@@ -77,7 +77,7 @@ const Navbar = () => {
                     <li>
                         <a
                             href="#tech"
-                            className="hover:text-stone-100 transition-all duration-200"
+                            className="hover:text-cyan-300 transition-all duration-200"
                         >
                             Tech
                         </a>
@@ -85,7 +85,7 @@ const Navbar = () => {
                     <li>
                         <a
                             href="#projects"
-                            className="hover:text-stone-100 transition-all duration-200"
+                            className="hover:text-cyan-300 transition-all duration-200"
                         >
                             Projects
                         </a>
@@ -93,7 +93,7 @@ const Navbar = () => {
                     <li>
                         <a
                             href="#experience"
-                            className="hover:text-stone-100 transition-all duration-200"
+                            className="hover:text-cyan-300 transition-all duration-200"
                         >
                             Experience
                         </a>
@@ -101,7 +101,7 @@ const Navbar = () => {
                     <li>
                         <a
                             href="#contact"
-                            className="hover:text-stone-100 transition-all duration-200"
+                            className="hover:text-cyan-300 transition-all duration-200"
                         >
                             Contact
                         </a>

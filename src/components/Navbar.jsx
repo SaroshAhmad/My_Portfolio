@@ -1,25 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import logo from "../assets/AhmadSaroshLogo.svg";
 import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 0);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    // Scroll handler
+    const handleScroll = () => {
+        setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
 
     return (
         <nav
             className={`flex items-center justify-between py-5 px-8 fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
-                ? "bg-stone-900/70 backdrop-blur-md shadow-lg"
+                ? "bg-gradient-to-b from-stone-900/70 via-stone-900/50 to-transparent backdrop-blur-md shadow-lg"
                 : "bg-transparent"
                 }`}
         >
@@ -34,9 +31,9 @@ const Navbar = () => {
                 </a>
             </div>
 
-            {/* Navigation Links Section */}
-            <div className="flex-1 flex justify-center">
-                <ul className="hidden lg:flex gap-8 text-lg font-semibold text-stone-300">
+            {/* Navigation Links for Large Screens */}
+            <div className="hidden lg:flex flex-1 justify-center">
+                <ul className="flex gap-8 text-lg font-semibold text-stone-300">
                     <li>
                         <a
                             href="#tech"
@@ -72,14 +69,14 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            {/* Social Icons Section */}
-            <div className="flex items-center gap-4 text-2xl text-stone-300">
+            {/* Social Icons for Large Screens */}
+            <div className="hidden lg:flex items-center gap-4 text-2xl text-stone-300">
                 <a
                     href="https://www.linkedin.com/in/ahmadsarosh/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
-                    className="hover:text-stone-100 transition-all duration-200"
+                    className="hover:text-cyan-300 transition-all duration-200"
                 >
                     <FaLinkedin />
                 </a>
@@ -88,7 +85,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
-                    className="hover:text-stone-100 transition-all duration-200"
+                    className="hover:text-cyan-300 transition-all duration-200"
                 >
                     <FaGithub />
                 </a>
@@ -97,7 +94,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
-                    className="hover:text-stone-100 transition-all duration-200"
+                    className="hover:text-cyan-300 transition-all duration-200"
                 >
                     <FaInstagram />
                 </a>
@@ -106,10 +103,102 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="x"
-                    className="hover:text-stone-100 transition-all duration-200"
+                    className="hover:text-cyan-300 transition-all duration-200"
                 >
                     <FaXTwitter />
                 </a>
+            </div>
+
+            {/* Hamburger Menu Icon for Small Screens */}
+            <div className="lg:hidden">
+                <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="text-2xl text-stone-300 hover:text-cyan-300 transition-all duration-500"
+                    aria-label="Toggle Menu"
+                >
+                    {isMenuOpen ? <RxCross1 /> : <RxHamburgerMenu />}
+                </button>
+            </div>
+
+            {/* Hamburger Menu Dropdown for Small Screens */}
+            <div
+                className={`fixed top-32 right-4 w-60 h-auto pb-4 bg-stone-900/60 backdrop-blur-sm rounded-lg z-40 transition-all duration-300 transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+            >
+                <div className="flex flex-col items-start justify-start mt-12 ml-4 gap-8 text-stone-300 text-lg font-semibold">
+                    {/* Navbar Links */}
+                    <a
+                        href="#tech"
+                        className="hover:text-cyan-300 transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        Tech
+                    </a>
+                    <a
+                        href="#projects"
+                        className="hover:text-cyan-300 transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        Projects
+                    </a>
+                    <a
+                        href="#experience"
+                        className="hover:text-cyan-300 transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        Experience
+                    </a>
+                    <a
+                        href="#contact"
+                        className="hover:text-cyan-300 transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        Contact
+                    </a>
+
+                    {/* Social Icons */}
+                    <div className="flex gap-4 text-2xl">
+                        <a
+                            href="https://www.linkedin.com/in/ahmadsarosh/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            className="hover:text-cyan-300 transition-all duration-200"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            <FaLinkedin />
+                        </a>
+                        <a
+                            href="https://github.com/SaroshAhmad"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                            className="hover:text-cyan-300 transition-all duration-200"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            <FaGithub />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/iamsaroshahmad/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                            className="hover:text-cyan-300 transition-all duration-200"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            <FaInstagram />
+                        </a>
+                        <a
+                            href="https://x.com/AhmadSarosh07"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="x"
+                            className="hover:text-cyan-300 transition-all duration-200"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            <FaXTwitter />
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
     );

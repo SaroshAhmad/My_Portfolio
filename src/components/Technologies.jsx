@@ -21,7 +21,7 @@ import { SiPostman } from "react-icons/si";
 
 const Technologies = () => {
     return (
-        <div className="pb-24">
+        <div className="pb-24 border-t border-stone-900" id="tech">
             <h2 className="my-20 text-center text-4xl">Tech Stack</h2>
             <div className="flex flex-wrap items-center justify-center gap-4">
                 <div>

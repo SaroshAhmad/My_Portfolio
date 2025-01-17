@@ -2,7 +2,7 @@ import { PROJECTS } from "../constants"
 
 const Projects = () => {
     return (
-        <div className="pb-4">
+        <div className="pb-4 border-t border-stone-900" id="projects">
             <h2 className="my-20 text-center text-4xl">Projects</h2>
             <div>
                 {PROJECTS.map((project, index) => (
@@ -12,7 +12,7 @@ const Projects = () => {
                                 width={250}
                                 height={250}
                                 alt={project.title}
-                                className="mb-6 rounded" />
+                                className="mb-6 rounded border border-stone-800 transition-all duration-300 hover:shadow-[0_0_15px_5px_rgba(136,165,191,0.5)]" />
                         </div>
                         <div className="w-full max-w-xl lg:w-3/4">
                             <h3 className="mb-2 font-semibold text-2xl">{project.title}</h3>

@@ -114,6 +114,14 @@ const Navbar = () => {
                             Contact
                         </a>
                     </li>
+                    {/* <li>
+                        <a
+                            href="/blog"
+                            className="hover:text-cyan-300 transition-all duration-200"
+                        >
+                            Blog
+                        </a>
+                    </li> */}
                 </ul>
             </div>
 
@@ -207,9 +215,20 @@ const Navbar = () => {
                     >
                         Contact
                     </a>
+                    {/* <a
+                        href="/blog"
+                        className="hover:text-cyan-300 transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                    >
+                        Blog
+                    </a> */}
 
                     {/* Social Icons */}
                     <div className="flex gap-4 text-2xl">
+                        <FaHeart
+                            onClick={handleLike}
+                            className={`text-3xl cursor-pointer ${isLiked ? "text-red-500 delay-300" : "text-stone-300"}`}
+                        />
                         <a
                             href="https://www.linkedin.com/in/ahmadsarosh/"
                             target="_blank"

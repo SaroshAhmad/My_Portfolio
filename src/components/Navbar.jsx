@@ -114,14 +114,14 @@ const Navbar = () => {
                             Contact
                         </a>
                     </li>
-                    {/* <li>
+                    <li>
                         <a
                             href="/blog"
                             className="hover:text-cyan-300 transition-all duration-200"
                         >
                             Blog
                         </a>
-                    </li> */}
+                    </li>
                 </ul>
             </div>
 
@@ -215,13 +215,13 @@ const Navbar = () => {
                     >
                         Contact
                     </a>
-                    {/* <a
+                    <a
                         href="/blog"
                         className="hover:text-cyan-300 transition-all duration-200"
                         onClick={() => setIsMenuOpen(false)}
                     >
                         Blog
-                    </a> */}
+                    </a>
 
                     {/* Social Icons */}
                     <div className="flex gap-4 text-2xl">

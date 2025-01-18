@@ -88,7 +88,7 @@ const BlogPost = () => {
     const easing = [0.6, -0.05, 0.01, 0.99];
 
     return (
-        <div className="pt-20 pb-4 min-h-screen">
+        <div className="mt-20 pt-20 pb-4 min-h-screen">
             <motion.article
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

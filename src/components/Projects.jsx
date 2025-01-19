@@ -20,7 +20,7 @@ const ProjectCard = ({ project, index }) => {
             transition: {
                 duration: 1.2,
                 ease: "easeOut",
-                delay: index * 0.4  // Increased delay between cards
+                delay: index * 0.2  // Increased delay between cards
             }
         }
     };

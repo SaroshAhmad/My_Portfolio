@@ -1,3 +1,4 @@
+
 import { useLocation } from "react-router-dom"; // Import the hook
 import { useState, useEffect } from "react";
 import logo from "../assets/AhmadSaroshLogo.svg";
@@ -12,6 +13,7 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
     const [likeCount, setLikeCount] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false); // State for modal visibility
     const location = useLocation(); // Get the current location
 
     // Scroll handler
@@ -53,11 +55,7 @@ const Navbar = () => {
             origin: { y: 0.6 },
         });
 
-        showThankYouMessage();
-    };
-
-    const showThankYouMessage = () => {
-        alert(`Thank you for your love! The website has ${likeCount + 1} likes!`);
+        setIsModalOpen(true); // Open the gratitude modal
     };
 
     // Determine whether to hide items
@@ -133,7 +131,8 @@ const Navbar = () => {
                     <div className="hidden lg:flex items-center gap-4 text-2xl text-stone-300">
                         <FaHeart
                             onClick={handleLike}
-                            className={`text-3xl cursor-pointer ${isLiked ? "text-red-500 delay-300" : "text-stone-300"}`}
+                            className={`text-3xl cursor-pointer ${isLiked ? "text-red-500 delay-300" : "text-stone-300"
+                                }`}
                         />
                         <a
                             href="https://www.linkedin.com/in/ahmadsarosh/"
@@ -175,7 +174,7 @@ const Navbar = () => {
                 </>
             )}
 
-            {/* Hamburger Menu Dropdown for Small Screens */}
+            {/* Hamburger Menu for Small Screens */}
             {!isBlogPage && (
                 <>
                     <div className="lg:hidden">
@@ -233,7 +232,8 @@ const Navbar = () => {
                                 <div className="flex gap-4 text-2xl">
                                     <FaHeart
                                         onClick={handleLike}
-                                        className={`text-3xl cursor-pointer ${isLiked ? "text-red-500 delay-300" : "text-stone-300"}`}
+                                        className={`text-3xl cursor-pointer ${isLiked ? "text-red-500 delay-300" : "text-stone-300"
+                                            }`}
                                     />
                                     <a
                                         href="https://www.linkedin.com/in/ahmadsarosh/"
@@ -276,6 +276,27 @@ const Navbar = () => {
                         </div>
                     )}
                 </>
+            )}
+
+            {/* Modal */}
+            {isModalOpen && (
+                <div className="fixed px-6 inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                    <div className="bg-white rounded-lg shadow-lg p-6 text-center max-w-md mx-auto">
+                        <h2 className="text-xl font-bold text-stone-800">
+                            Thank You for Your Love! ❤️
+                        </h2>
+                        <p className="text-stone-600 mt-2">
+                            Your support means the world! The website now has{" "}
+                            <span className="text-cyan-500 font-semibold">{likeCount}</span> likes.
+                        </p>
+                        <button
+                            onClick={() => setIsModalOpen(false)}
+                            className="mt-4 bg-cyan-400 text-white px-4 py-2 rounded hover:bg-cyan-500 transition"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
             )}
         </nav>
     );

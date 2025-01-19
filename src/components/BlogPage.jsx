@@ -10,7 +10,7 @@ const blogs = [
         excerpt:
             "Exploring the latest trends in web development and how to implement them effectively...",
         date: "March 15, 2025",
-        imageUrl: "../public/images/blog1.jpg",
+        imageUrl: "/images/blog1.jpg",
         category: "Web Development",
         content: `
         <h1>Building Modern Web Applications: A Guide for Today's Digital Landscape</h1>
@@ -78,7 +78,7 @@ const blogs = [
         excerpt:
             "Understand the core principles of React to build scalable and maintainable applications...",
         date: "Coming in 2025",
-        imageUrl: "../public/images/blog2.jpg",
+        imageUrl: "/images/blog2.jpg",
         category: "Frontend Development",
         content: "", // No content available
     },
@@ -88,7 +88,7 @@ const blogs = [
         excerpt:
             "Dive into how AI is shaping the future of web development and how you can leverage it...",
         date: "Coming in 2025",
-        imageUrl: "../public/images/blog3.jpg",
+        imageUrl: "/images/blog3.jpg",
         category: "AI and Web",
         content: "", // No content available
     },

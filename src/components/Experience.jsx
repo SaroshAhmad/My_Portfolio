@@ -17,7 +17,7 @@ const Experience = () => {
                                 {experience.role} -{" "}
                                 <span className="text-sm text-stone-400">{experience.company}</span>
                             </h3>
-                            <p className="mb-4 text-stone-300">{experience.description}</p>
+                            <p className="mb-4 text-stone-200">{experience.description}</p>
                             {/* Flex container for technologies */}
                             <div className="flex flex-wrap gap-2 mt-4">
                                 {experience.technologies.map((tech, index) => (

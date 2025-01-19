@@ -55,7 +55,7 @@ const ProjectCard = ({ project, index }) => {
 
                     <div className="w-full lg:w-3/5">
                         <motion.h3
-                            className="text-2xl sm:text-3xl font-semibold mb-4 text-stone-100"
+                            className="text-2xl sm:text-3xl font-semibold mb-4 text-white"
                             initial={{ opacity: 0, x: -30 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                             transition={{ delay: index * 0.4 + 0.6, duration: 1 }}
@@ -64,7 +64,7 @@ const ProjectCard = ({ project, index }) => {
                         </motion.h3>
 
                         <motion.p
-                            className="text-base sm:text-lg text-stone-300 mb-6 leading-relaxed"
+                            className="text-base sm:text-lg text-stone-200 mb-6 leading-relaxed"
                             initial={{ opacity: 0, x: -30 }}
                             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                             transition={{ delay: index * 0.4 + 0.8, duration: 1 }}

@@ -206,7 +206,7 @@ const BlogPage = () => {
             >
                 <div className="mt-10 mb-12 text-center">
                     <motion.h1
-                        className="text-6xl mb-2 lg:text-[12rem] font-bold pb-4 lg:mb-10 bg-gradient-to-r from-cyan-100 to-cyan-500 bg-clip-text text-transparent"
+                        className="text-6xl mb-2 lg:text-[10rem] font-bold pb-4 lg:mb-6 bg-gradient-to-r from-cyan-100 to-cyan-500 bg-clip-text text-transparent"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.2, ease: easing }}
@@ -214,7 +214,7 @@ const BlogPage = () => {
                         My Blogs
                     </motion.h1>
                     <motion.p
-                        className="text-white text-base font-medium lg:text-4xl"
+                        className="text-white text-base font-medium lg:text-2xl"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1.2, ease: easing, delay: 0.2 }}

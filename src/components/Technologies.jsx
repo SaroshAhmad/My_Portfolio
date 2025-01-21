@@ -158,7 +158,7 @@ const Technologies = () => {
                 {Object.keys(technologiesByCategory).map((category) => (
                     <motion.button
                         key={category}
-                        className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 border backdrop-blur-sm
+                        className={`px-3 py-2 md:px-6 md:py-3 rounded-full text-xs md:text-sm font-medium transition-all duration-300 border backdrop-blur-sm
                             ${selectedCategory === category
                                 ? 'border-cyan-400 text-cyan-400 bg-cyan-400/10'
                                 : 'border-stone-700 text-stone-400 hover:border-stone-500 hover:text-stone-300'}`}

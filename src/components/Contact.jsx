@@ -40,7 +40,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="pt-24 px-4 md:px-8 border-t border-cyan-950" id="contact">
+        <div className="pt-24 pb-4 px-4 md:px-8 border-t border-cyan-950" id="contact">
             <h2 className="mb-12 text-center text-4xl text-stone-200">Get In <span className="text-cyan-400">Touch</span></h2>
             <div className="text-center tracking-tighter text-stone-300 mb-12 lg:text-left lg:flex lg:justify-between lg:space-x-10">
                 <div className="w-full lg:w-1/2 lg:mt-10 lg:ml-60">

@@ -36,7 +36,7 @@ const Hero = () => {
     };
 
     return (
-        <div className="pt-20 pb-4 lg:mb-36 mt-10">
+        <div className="pt-16 lg:pt-28 pb-4 md:pb-16 lg:mb-36 mt-10">
             <div className="flex flex-wrap lg:flex-row-reverse">
                 {/* Profile Picture Section */}
                 <div className="w-full lg:w-1/2">
@@ -58,7 +58,7 @@ const Hero = () => {
                 <div className="w-full lg:w-1/2">
                     <div className="flex flex-col items-center lg:items-start mt-10">
                         {/* Name */}
-                        <h2 className="pb-2 text-white text-5xl justify-center tracking-tighter lg:text-8xl mt-0 lg:mt-10">
+                        <h2 className="pb-2 text-white text-5xl justify-center tracking-tighter lg:text-8xl mt-0 lg:mt-12">
                             <motion.span
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}

@@ -49,7 +49,7 @@ export const PROJECTS = [
     technologies: ["JavaScript", "React", "Tailwind CSS", "API", "Firebase"],
     githubLink: "https://github.com/SaroshAhmad/Netflix_Clone",
     status: "Completed",
-    categories: ["Full Stack"],
+    categories: ["Full Stack", "Web Development"],
   },
   {
     title: "Task Management App",

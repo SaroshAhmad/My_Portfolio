@@ -2,8 +2,8 @@ import { EXPERIENCES } from "../constants"
 
 const Experience = () => {
     return (
-        <div className="pb-4 border-t border-cyan-950" id="experience">
-            <h2 className="my-20 text-center text-4xl">Experience</h2>
+        <div className="py-24 px-4 md:px-8 border-t border-cyan-950" id="experience">
+            <h2 className="mb-12 text-center text-4xl text-stone-200">Experience</h2>
             <div>
                 {EXPERIENCES.map((experience, index) => (
                     <div key={index} className="mb-8 flex flex-wrap lg:justify-center">

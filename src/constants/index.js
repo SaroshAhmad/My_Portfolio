@@ -48,6 +48,7 @@ export const PROJECTS = [
     fullDescription: `The Netflix clone is a web application built with React.js that replicates core Netflix features. Firebase handles user authentication and backend services, while the TMDB API provides real-time movie and TV show data. Users can create accounts, browse through categorized content (Trending, Top Rated, etc.), and search for specific titles. The interface features a dynamic hero banner, smooth-scrolling movie rows, and expandable movie cards that reveal additional information on hover. The application is responsive across all devices and employs modern web practices like lazy loading and API caching for optimal performance. React Context API manages the application state, while custom hooks handle data fetching and user interactions. The result is a polished streaming platform that demonstrates practical implementation of modern web technologies.`,
     technologies: ["JavaScript", "React", "Tailwind CSS", "API", "Firebase"],
     githubLink: "https://github.com/SaroshAhmad/Netflix_Clone",
+    status: "Completed",
   },
   {
     title: "Task Management App",
@@ -63,6 +64,7 @@ export const PROJECTS = [
     Key features include task filtering by status and assignee, deadline tracking with visual indicators, and a simple yet effective notification system for task updates. The interface is built with modern React components, emphasizing clean design and ease of use. State management through Context API eliminates prop drilling and maintains a single source of truth for task data, while useState handles component-level interactions. This project demonstrates practical implementation of React's core features to create a functional, real-world application for everyday task management.`,
     technologies: ["React", "JSX", "CSS"],
     githubLink: "https://github.com/SaroshAhmad/",
+    status: "Completed",
   },
   {
     title: "Portfolio Website",
@@ -74,6 +76,7 @@ export const PROJECTS = [
     Notable technical implementations include smooth scrolling navigation, responsive image handling, and optimized performance through modern React practices. The addition of a blog section with individual post pages demonstrates the site's scalability for content management. Overall, the portfolio effectively balances modern design elements with professional presentation to showcase both technical expertise and attention to detail.`,
     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
     githubLink: "https://github.com/SaroshAhmad/My_Portfolio",
+    status: "Completed",
   },
   {
     title: "Smart Home Automation System ",
@@ -85,6 +88,7 @@ export const PROJECTS = [
     fullDescription: `Built a microservice-based smart home automation system using Spring Boot, Angular, and MySQL. The system enables users to automate and control various home functions, including lighting, security, and temperature, through a user-friendly interface. Each service, such as lighting control and security management, operates independently, ensuring scalability and maintainability. The backend is powered by Spring Boot for efficient service handling, while Angular provides an intuitive front-end. MySQL is used for data storage, allowing for real-time updates and secure management of user preferences and system settings.`,
     technologies: ["Java", "SpringBoot", "Angular", "MySQL", "Tomcat"],
     githubLink: "https://github.com/SaroshAhmad/smart-home-automation",
+    status: "Completed",
   },
 ];
 

@@ -49,6 +49,7 @@ export const PROJECTS = [
     technologies: ["JavaScript", "React", "Tailwind CSS", "API", "Firebase"],
     githubLink: "https://github.com/SaroshAhmad/Netflix_Clone",
     status: "Completed",
+    categories: ["Full Stack"],
   },
   {
     title: "Task Management App",
@@ -65,6 +66,7 @@ export const PROJECTS = [
     technologies: ["React", "JSX", "CSS"],
     githubLink: "https://github.com/SaroshAhmad/",
     status: "Completed",
+    categories: ["Front End"],
   },
   {
     title: "Portfolio Website",
@@ -77,6 +79,7 @@ export const PROJECTS = [
     technologies: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
     githubLink: "https://github.com/SaroshAhmad/My_Portfolio",
     status: "Completed",
+    categories: ["Full Stack", "Web Development"],
   },
   {
     title: "Smart Home Automation System ",
@@ -89,6 +92,7 @@ export const PROJECTS = [
     technologies: ["Java", "SpringBoot", "Angular", "MySQL", "Tomcat"],
     githubLink: "https://github.com/SaroshAhmad/smart-home-automation",
     status: "Completed",
+    categories: ["Full Stack", "Web Development"],
   },
 ];
 

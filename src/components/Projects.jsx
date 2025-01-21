@@ -138,7 +138,7 @@ const ProjectCard = ({ project, index }) => {
                                 href={project.githubLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-100 text-sm sm:text-base transition-all duration-500 hover:translate-x-2"
+                                className="inline-flex items-center gap-2 px-4 mr-2 sm:px-6 py-2 sm:py-3 rounded-lg bg-stone-800 hover:bg-stone-700 text-stone-100 text-sm sm:text-base transition-all duration-500 hover:translate-x-2"
                             >
                                 View Project
                                 <svg

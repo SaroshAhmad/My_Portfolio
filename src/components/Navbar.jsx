@@ -190,7 +190,7 @@ const Navbar = () => {
                     {/* Dropdown Menu */}
                     {isMenuOpen && (
                         <div
-                            className="fixed top-32 right-4 w-60 h-auto pb-4 bg-stone-900/80 backdrop-blur-sm rounded-lg z-40 transition-all duration-300 transform"
+                            className="fixed top-32 right-4 w-60 h-auto pb-4 bg-stone-900/90 backdrop-blur-sm rounded-lg z-40 transition-all duration-300 transform"
                         >
                             <div className="flex flex-col items-start justify-start mt-12 ml-4 gap-8 text-stone-300 text-lg font-semibold">
                                 <a

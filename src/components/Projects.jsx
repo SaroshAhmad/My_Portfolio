@@ -2,7 +2,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { PROJECTS } from "../constants";
 
-// Categories array remains the same
+// Categories array
 const CATEGORIES = [
     "Web Development",
     "Mobile Development",
@@ -17,7 +17,7 @@ const ProjectCard = ({ project, index }) => {
     const isInView = useInView(cardRef, { once: true, margin: "-100px" });
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Updated card animation variants
+    // Card animation variants
     const cardVariants = {
         hidden: {
             opacity: 0,
@@ -189,7 +189,7 @@ const ProjectCard = ({ project, index }) => {
     );
 };
 
-// Navigation Button Component (remains mostly the same with adjusted positioning)
+// Navigation Button Component
 const NavigationButton = ({ direction, onClick, disabled }) => (
     <motion.button
         onClick={onClick}

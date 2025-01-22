@@ -19,6 +19,10 @@ import { SiGooglecloud } from "react-icons/si";
 import { SiFirebase } from "react-icons/si";
 import { FaFigma } from "react-icons/fa6";
 import { SiMysql } from "react-icons/si";
+import { SiMui } from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { SiExpress } from "react-icons/si";
+import { DiIllustrator } from "react-icons/di";
 
 const technologiesByCategory = {
     "Programming Languages": [
@@ -29,48 +33,37 @@ const technologiesByCategory = {
     ],
     "Frontend": [
         { icon: <FaReact />, name: "React", link: "https://reactjs.org/", color: "text-cyan-400" },
-        { icon: <RiNextjsFill />, name: "Next.js", link: "https://nextjs.org/", color: "text-stone-200" },
-        { icon: <FaAngular />, name: "Angular", link: "https://angular.io/", color: "text-red-600" },
         { icon: <RiTailwindCssFill />, name: "Tailwind CSS", link: "https://tailwindcss.com/", color: "text-cyan-400" },
+        { icon: <RiNextjsFill />, name: "Next.js", link: "https://nextjs.org/", color: "text-stone-200" },
         { icon: <FaHtml5 />, name: "HTML5", link: "https://developer.mozilla.org/en-US/docs/Web/HTML", color: "text-red-600" },
         { icon: <FaCss3Alt />, name: "CSS3", link: "https://developer.mozilla.org/en-US/docs/Web/CSS", color: "text-blue-600" },
+        { icon: <SiMui />, name: "Material-UI", link: "https://mui.com/", color: "text-blue-500" },
+        { icon: <TbBrandFramerMotion />, name: "Framer Motion", link: "https://www.framer.com/motion/", color: "text-yellow-300" },
+        { icon: <FaAngular />, name: "Angular", link: "https://angular.io/", color: "text-red-600" },
     ],
     "Backend": [
+        { icon: <SiExpress />, name: "Express.js", link: "https://expressjs.com/", color: "text-white" },
         { icon: <FaNodeJs />, name: "Node.js", link: "https://nodejs.org/", color: "text-green-600" },
         { icon: <SiSpringboot />, name: "Spring Boot", link: "https://spring.io/projects/spring-boot", color: "text-green-500" },
     ],
     "Databases": [
+        { icon: <SiMysql />, name: "MySQL", link: "https://www.mysql.com/", color: "text-cyan-600" },
         { icon: <SiMongodb />, name: "MongoDB", link: "https://www.mongodb.com/", color: "text-green-600" },
         { icon: <SiRedis />, name: "Redis", link: "https://redis.io/", color: "text-orange-600" },
-        { icon: <SiMysql />, name: "MySQL", link: "https://www.mysql.com/", color: "text-blue-500" },
     ],
     "Cloud & Tools": [
-        { icon: <SiGooglecloud />, name: "Google Cloud", link: "https://cloud.google.com/", color: "text-blue-400" },
         { icon: <SiFirebase />, name: "Firebase", link: "https://firebase.google.com/", color: "text-yellow-500" },
         { icon: <SiPostman />, name: "Postman", link: "https://www.postman.com/", color: "text-orange-600" },
+        { icon: <SiGooglecloud />, name: "Google Cloud", link: "https://cloud.google.com/", color: "text-blue-400" },
         { icon: <FaFigma />, name: "Figma", link: "https://www.figma.com/", color: "text-purple-500" },
+        { icon: <DiIllustrator />, name: "Adobe Illustrator", link: "https://www.adobe.com/products/illustrator.html", color: "text-red-600" },
     ],
 };
 
 const Technologies = () => {
-    const [shuffledTechByCategory, setShuffledTechByCategory] = useState({});
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     useEffect(() => {
-        const shuffleArray = (array) => {
-            const newArray = [...array];
-            for (let i = newArray.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-            }
-            return newArray;
-        };
-
-        const shuffledCategories = {};
-        Object.entries(technologiesByCategory).forEach(([category, techs]) => {
-            shuffledCategories[category] = shuffleArray(techs);
-        });
-        setShuffledTechByCategory(shuffledCategories);
         setSelectedCategory(Object.keys(technologiesByCategory)[0]);
     }, []);
 
@@ -188,7 +181,7 @@ const Technologies = () => {
                             whileInView="visible"
                             viewport={{ once: true, margin: "-50px" }}
                         >
-                            {shuffledTechByCategory[selectedCategory]?.map((tech, index) => (
+                            {technologiesByCategory[selectedCategory]?.map((tech, index) => (
                                 <motion.div
                                     key={index}
                                     className="group relative rounded-xl overflow-hidden"

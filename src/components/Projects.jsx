@@ -169,7 +169,7 @@ const ProjectCard = ({ project, index }) => {
             {isModalOpen && (
                 <div className="fixed inset-0 bg-stone-900/60 z-50 flex justify-center items-center backdrop-blur-sm">
                     <motion.div
-                        className="bg-stone-800 rounded-lg p-6 w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 max-h-[80vh] overflow-y-auto"
+                        className="bg-stone-800 rounded-lg p-6 w-9/12  md:w-2/3 lg:w-1/2 max-h-[80vh] overflow-y-auto"
                         initial={{ opacity: 0, y: 50, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ type: "spring", stiffness: 300, damping: 25 }}

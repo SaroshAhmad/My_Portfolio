@@ -130,7 +130,7 @@ const Technologies = () => {
     };
 
     return (
-        <div className="pt-24 pb-16 px-4 md:pb-0 md:px-8 border-t border-cyan-950" id="tech">
+        <div className="pt-24 pb-40 px-4 md:pb-0 md:px-8 border-t border-cyan-950" id="tech">
             <motion.h2
                 className="mb-12 text-center text-4xl text-stone-200"
                 initial={{ opacity: 0, y: -20 }}

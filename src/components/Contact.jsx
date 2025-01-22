@@ -44,14 +44,14 @@ const Contact = () => {
             <h2 className="mb-12 text-center text-4xl text-stone-200">Get In <span className="text-cyan-400">Touch</span></h2>
             <div className="text-center tracking-tighter text-stone-300 mb-12 lg:text-left lg:flex lg:justify-between lg:space-x-10">
                 <div className="w-full lg:w-1/2 lg:mt-10 lg:ml-60">
-                    <p className="my-4">{CONTACT.address}</p>
+                    <p className="font-semibold my-4">{CONTACT.address}</p>
                     <div>
-                        <a href={`mailto:${CONTACT.email}`} className="text-cyan-400 hover:text-cyan-500 transition block mb-4">
+                        <a href={`mailto:${CONTACT.email}`} className="font-semibold text-cyan-400 hover:text-cyan-500 transition block mb-4">
                             {CONTACT.email}
                         </a>
                     </div>
                     <div>
-                        <a href={`tel:${CONTACT.phoneNo}`} className="text-cyan-400 hover:text-cyan-500 transition block">
+                        <a href={`tel:${CONTACT.phoneNo}`} className="font-semibold text-cyan-400 hover:text-cyan-500 transition block">
                             {CONTACT.phoneNo}
                         </a>
                     </div>

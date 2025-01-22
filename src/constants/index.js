@@ -97,7 +97,7 @@ export const PROJECTS = [
 ];
 
 export const CONTACT = {
-  address: "Augustus Road, Birmingham, B15 3NB, UK ",
+  address: "Birmingham, United Kingdom 🇬🇧 ",
   phoneNo: "+44 7436659548 ",
   email: "ahmadsarosh07@gmail.com",
 };

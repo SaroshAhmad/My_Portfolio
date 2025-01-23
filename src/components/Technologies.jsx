@@ -23,6 +23,8 @@ import { SiMui } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { SiExpress } from "react-icons/si";
 import { DiIllustrator } from "react-icons/di";
+import { SiRedux } from "react-icons/si";
+
 
 const technologiesByCategory = {
     "Programming Languages": [
@@ -33,8 +35,9 @@ const technologiesByCategory = {
     ],
     "Frontend": [
         { icon: <FaReact />, name: "React", link: "https://reactjs.org/", color: "text-cyan-400" },
-        { icon: <RiTailwindCssFill />, name: "Tailwind CSS", link: "https://tailwindcss.com/", color: "text-cyan-400" },
-        { icon: <RiNextjsFill />, name: "Next.js", link: "https://nextjs.org/", color: "text-stone-200" },
+        { icon: <SiRedux />, name: "Redux", link: "https://redux.js.org/", color: "text-purple-500" },
+        { icon: <RiTailwindCssFill />, name: "Tailwind", link: "https://tailwindcss.com/", color: "text-cyan-400" },
+        { icon: <RiNextjsFill />, name: "Next", link: "https://nextjs.org/", color: "text-stone-200" },
         { icon: <FaHtml5 />, name: "HTML5", link: "https://developer.mozilla.org/en-US/docs/Web/HTML", color: "text-red-600" },
         { icon: <FaCss3Alt />, name: "CSS3", link: "https://developer.mozilla.org/en-US/docs/Web/CSS", color: "text-blue-600" },
         { icon: <SiMui />, name: "Material-UI", link: "https://mui.com/", color: "text-blue-500" },

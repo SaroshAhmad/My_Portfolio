@@ -167,7 +167,7 @@ const Technologies = () => {
                 ))}
             </motion.div>
 
-            <div className="relative min-h-[400px] lg:min-h-[300px]">
+            <div className="relative min-h-[550px] md:min-h-[450px] lg:min-h-[300px]">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={selectedCategory}

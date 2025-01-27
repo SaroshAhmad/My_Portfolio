@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.svg";
 import project2 from "../assets/projects/project-2.svg";
 import project3 from "../assets/projects/project-3.svg";
 import project4 from "../assets/projects/project-4.svg";
+import project6 from "../assets/projects/project-6.svg";
 
 export const HERO_CONTENT = `Hey! I'm a Full-stack Developer who loves turning ideas into reality through code. Fresh out of Strathclyde with a Software Development degree, I bring a unique mix of tech skills and business thinking to every project. Currently crafting AI-powered educational tools and building cool stuff with React, Next.js, and Node.js. When I'm not geeking out over new tech, I'm probably experimenting with cloud platforms or dreaming up the next big web app. I'm all about creating sleek interfaces and robust systems that not only work great but also make a real difference.`;
 
@@ -39,6 +40,26 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "Full-Stack Twitter Clone",
+    image: project6,
+    description:
+      `Building a modern social media platform from the ground up using the MERN stack`,
+    fullDescription: `Developed a feature-rich Twitter clone that replicates core social media functionalities using modern web technologies. This full-stack application was built using React.js for the frontend, Express.js and Node.js for the backend API, and MongoDB for data persistence. Key Features:
+
+    Real-time tweet feed with create, read, update, and delete capabilities
+    User authentication and authorization with JWT tokens
+    User profiles with customizable avatars and bio information
+    Follow/unfollow functionality to curate personalized feeds
+    Like and retweet interactions
+    Responsive design optimized for both desktop and mobile devices
+    Image upload and sharing capabilities
+    Real-time notifications using WebSocket technology`,
+    technologies: ["JavaScript", "React", "Tailwind CSS", "API", "MongoDB", "Express.js", "Node.js"],
+    githubLink: "https://github.com/SaroshAhmad/Twitter-Clone",
+    status: "In Progress",
+    categories: ["Full Stack", "Web Development"],
+  },
   {
     title: "Netflix Clone",
     image: project1,

@@ -110,7 +110,7 @@ export const PROJECTS = [
       microservice-based smart home system using Spring Boot, Angular, and MySQL, automating
       tasks like lighting and security.`,
     fullDescription: `Built a microservice-based smart home automation system using Spring Boot, Angular, and MySQL. The system enables users to automate and control various home functions, including lighting, security, and temperature, through a user-friendly interface. Each service, such as lighting control and security management, operates independently, ensuring scalability and maintainability. The backend is powered by Spring Boot for efficient service handling, while Angular provides an intuitive front-end. MySQL is used for data storage, allowing for real-time updates and secure management of user preferences and system settings.`,
-    technologies: ["Java", "SpringBoot", "Angular", "MySQL", "Tomcat"],
+    technologies: ["Microservice", "Java", "SpringBoot", "Angular", "MySQL", "Tomcat"],
     githubLink: "https://github.com/SaroshAhmad/smart-home-automation",
     status: "Completed",
     categories: ["Full Stack", "Web Development"],

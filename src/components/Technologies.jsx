@@ -53,7 +53,7 @@ const technologiesByCategory = {
     ],
     "Databases": [
         { icon: <SiMysql />, name: "MySQL", link: "https://www.mysql.com/", color: "text-cyan-600" },
-        { icon: <SiPostgresql />, name: "PostgreSQL", link: "https://www.postgresql.org/", color: "text-blue-600" },
+        { icon: <SiPostgresql />, name: "PostgreSQL", link: "https://www.postgresql.org/", color: "text-blue-400" },
         { icon: <SiMongodb />, name: "MongoDB", link: "https://www.mongodb.com/", color: "text-green-600" },
         { icon: <SiRedis />, name: "Redis", link: "https://redis.io/", color: "text-orange-600" },
     ],

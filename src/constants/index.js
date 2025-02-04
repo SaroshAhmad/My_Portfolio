@@ -4,7 +4,9 @@ import project3 from "../assets/projects/project-3.svg";
 import project4 from "../assets/projects/project-4.svg";
 import project6 from "../assets/projects/project-6.svg";
 
-export const HERO_CONTENT = `Hey! I'm a Full-stack Developer who loves turning ideas into reality through code. Fresh out of Strathclyde with a Software Development degree, I bring a unique mix of tech skills and business thinking to every project. Currently crafting AI-powered educational tools and building cool stuff with React, Next.js, and Node.js. When I'm not geeking out over new tech, I'm probably experimenting with cloud platforms or dreaming up the next big web app. I'm all about creating sleek interfaces and robust systems that not only work great but also make a real difference.`;
+export const HERO_CONTENT = `Hey! I'm a Full-Stack Developer with a Software Development degree from Strathclyde. I enjoy building web applications that are both functional and user-friendly. Right now, I’m working on AI-powered educational tools and developing projects using React, Next.js, and Node.js.
+
+I’ve built this website using React, Firebase, Tailwind CSS, and Framer Motion, focusing on smooth performance and great user experience. I like experimenting with cloud platforms and improving my skills by working on real-world projects. My goal is to create applications that solve problems and add value.`;
 
 export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 

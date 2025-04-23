@@ -79,7 +79,7 @@ const Footer = () => {
                         <ul className="space-y-4">
                             <li className="text-stone-400 flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 bg-cyan-400/50 rounded-full"></span>
-                                📍 Birmingham, UK
+                                📍 Glasgow, UK
                             </li>
                             <li>
                                 <a href="mailto:ahmadsarosh07@gmail.com" className="text-stone-400 hover:text-cyan-400 transition-colors duration-300 flex items-center gap-2 group">

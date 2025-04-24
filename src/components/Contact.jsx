@@ -27,7 +27,7 @@ const Contact = () => {
             });
 
             // Provide success feedback
-            setStatus("Thank you for your message! We will get back to you soon.");
+            setStatus("Thank you for your message! I'll get back to you soon.");
             setName("");
             setEmail("");
             setMessage("");
